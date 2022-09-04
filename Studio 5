@@ -1,9 +1,17 @@
 // use lst, head and tail to return value 1
 
-// list(7, list(6, 5, 4), 3, list(2, 1));
+const lst = list(7, list(list(6, 5), list(4), 3, 2), list(list(1)));
+draw_data(lst);
 
-// list(list(7), list(6, 5, 4), list(3, 2), 1);
+// 1st list
+// head(tail(head(tail(tail(tail(lst))))));
 
-// list(7, list(6), list(5, list(4)), list(3, list(2, list(1))));
+// 2nd list
+// head(tail(tail(tail(lst))));
 
-// list(7, list(list(6, 5), list(4), 3, 2), list(list(1)));
+// 3rd list
+// head(head(tail(head(tail(head(tail(tail(tail(lst)))))))));
+
+// 4th list
+head(head(head(tail(tail(lst)))));
+
