@@ -1,1 +1,22 @@
+// Question 1
+function flatten_list(list_of_lists) {
+    return accumulate(append, null, list_of_lists);
+}
 
+const LoL = list(list(1, 2), list(3, 4, 5, 6), null, list(7, 8, 9));
+draw_data(flatten_list(LoL));
+
+// Question 2
+function sum(x, y) {
+    return x + y;
+}
+function tree_sum(tree) {
+    return accumulate(sum, 0, flatten_list(tree));
+}
+const my_tree = list(1, list(2, list(3, 4), 5), list(6, 7));
+tree_sum(my_tree);
+
+// Question 3
+function accumulate_tree(f, op, initial, tree) {
+    return accumulate( /* your answer here */ , initial, tree);
+}
